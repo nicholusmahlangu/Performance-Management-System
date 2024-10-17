@@ -1,7 +1,8 @@
 // window.onload = function(){
 const form = document.getElementById('form')
-const full_name_input = document.getElementById('password-input')
+const full_name_input = document.getElementById('full-name-input')
 const email_input = document.getElementById('input-email')
+const role_input = document.getElementById('role-input')
 const password_input = document.getElementById('password-input')
 const confirm_password_input = document.getElementById('confirm-password-input')
 const error_message = document.getElementById('error-text')
@@ -10,7 +11,7 @@ form.addEventListener('submit', (e) => {
     let errors = []
     
     if(full_name_input){
-        errors = getSignUpFormErrors(full_name_input.value, email_input.value, password_input.value, confirm_password_input.value)
+        errors = getSignUpFormErrors(full_name_input.value, email_input.value, role_input.value, password_input.value, confirm_password_input.value)
     }
     else{
         ///This is where the login validations would be
@@ -21,16 +22,20 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-function getSignUpFormErrors(fullname, email_address, password, confirm_password){
+function getSignUpFormErrors(fullname, email_address, role, password, confirm_password){
     let errors = []
 
-    if (password ==='' || password == null) {
+    if (fullname === '' || fullname == null) {
         errors.push('Full name is required')
-        password.parentElement.classList.add('incorrect')
+        full_name_input.parentElement.classList.add('incorrect')
     }
-    if (email_address ==='' || email_address == null) {
+    if (email_address === '' || email_address == null) {
         errors.push('Email is required')
         email_input.parentElement.classList.add('incorrect')
+    }
+    if (role === 'Select option' || role == null) {
+        errors.push('Role is required')
+        role_input.parentElement.classList.add('incorrect')
     }
     if (password === '' || password == null) {
         errors.push('Password is required')
@@ -58,7 +63,17 @@ allInputs.forEach(input => {
     input.addEventListener('input', () => {
         if (input.parentElement.classList.contains('incorrect')) {
             input.parentElement.classList.remove('incorrect')            
-            error_text.innerText = ''
+            error_message.innerText = ''
+        }
+    })
+})
+
+const selectItem = [role_input]
+selectItem.forEach( select => {
+    select.addEventListener('select', () => {
+        if (select.parentElement.classList.contains('incorrect')) {
+            select.parentElement.classList.remove('incorrect')
+            error_message.innerText = ''
         }
     })
 })
