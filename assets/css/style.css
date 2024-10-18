@@ -9,9 +9,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: var(--text-color);
+  font-size: 12pt;
+  min-height:100vh;
+  /*I also changed the color, font-size, and added the min-height*/
 }
 
 a {
