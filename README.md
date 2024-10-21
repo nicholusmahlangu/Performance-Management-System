@@ -6,6 +6,7 @@ Nicholus Mahlangu - List of Youtube videos i used for the System Development Lif
 <img width="959" alt="Screenshot 2" src="https://github.com/user-attachments/assets/33b5f311-c493-4561-876b-bb03c424dd64">
 <img width="959" alt="Screenshot 3" src="https://github.com/user-attachments/assets/f2e7aa15-6add-4699-9e73-50c4eb9311b5">
 <img width="959" alt="Sign up page 1" src="https://github.com/user-attachments/assets/9740939c-cdca-447f-ba62-0d606fdac859">
+
 <img width="959" alt="validation 1" src="https://github.com/user-attachments/assets/6ebb7bac-c14e-4e07-bdf6-0cf1d6dbed69">
 <img width="959" alt="validation 2" src="https://github.com/user-attachments/assets/386c6962-a190-4ff2-a21b-25680da86f74">
 <img width="959" alt="validation 3" src="https://github.com/user-attachments/assets/39f5b4a3-5429-416e-8331-c5171d26ac0a">
